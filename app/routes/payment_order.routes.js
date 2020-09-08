@@ -8,7 +8,7 @@ module.exports = app => {
 
   // Retrieve all PaymentOrders with range dates
   app.post("/payment_orders_date", payment_orders.findAllWithDates);
-  
+
   // Retrieve all PaymentOrders
   app.get("/payment_orders", payment_orders.findAll);
 
@@ -21,6 +21,6 @@ module.exports = app => {
   // Delete a PaymentOrder with payment_orderId
   app.delete("/payment_orders/:payment_orderId", payment_orders.delete);
 
-  // Create a new PaymentOrder
+  // Delete all PaymentOrders
   app.delete("/payment_orders", payment_orders.deleteAll);
 };

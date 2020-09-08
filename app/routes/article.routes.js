@@ -9,7 +9,7 @@ module.exports = app => {
   // Retrieve all Articles
   app.get("/articles", articles.findAll);
 
-  // Retrieve all Articles
+  // Retrieve frequent Articles
   app.get("/frequent_articles/:howMany", articles.findFrequent);
 
   // Retrieve a single Article with articleId
@@ -21,6 +21,6 @@ module.exports = app => {
   // Delete a Article with articleId
   app.delete("/articles/:articleId", articles.delete);
 
-  // Create a new Article
+  // Delete all Articles
   app.delete("/articles", articles.deleteAll);
 };
